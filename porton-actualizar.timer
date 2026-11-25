@@ -1,0 +1,10 @@
+[Unit]
+Description=Busca versiones nuevas del lector del portón cada quince minutos
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=15min
+Unit=porton-actualizar.service
+
+[Install]
+WantedBy=timers.target

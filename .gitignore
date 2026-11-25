@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+salida/
+config.json
+autorizadas.txt
+secretos.json
+actualizacion.json

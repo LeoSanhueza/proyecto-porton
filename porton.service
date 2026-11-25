@@ -1,0 +1,20 @@
+[Unit]
+Description=Reconocimiento local de patentes del portón
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=porton
+Group=porton
+StateDirectory=porton
+StateDirectoryMode=0700
+WorkingDirectory=/var/lib/porton
+Environment=OMP_THREAD_LIMIT=1
+Environment=PYTHONUTF8=1
+ExecStart=/opt/porton/.venv/bin/python /opt/porton/porton.py --config /opt/porton/config.json leer --autorizadas /opt/porton/autorizadas.txt --solo-diario
+Restart=always
+RestartSec=10s
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

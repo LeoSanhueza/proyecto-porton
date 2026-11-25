@@ -1,0 +1,3 @@
+# Una patente por línea. Reemplaza estos ejemplos por las autorizadas.
+BCDF12
+AB1234

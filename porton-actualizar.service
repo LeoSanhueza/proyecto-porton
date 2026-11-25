@@ -1,0 +1,13 @@
+[Unit]
+Description=Descarga una versión publicada del lector del portón
+ConditionPathExists=/etc/porton/actualizacion.json
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3.13 /opt/porton/actualizar.py
+TimeoutStartSec=90
+UMask=0077
+NoNewPrivileges=yes
+ProtectSystem=strict
+ReadWritePaths=/opt/porton
+ProtectHome=yes
